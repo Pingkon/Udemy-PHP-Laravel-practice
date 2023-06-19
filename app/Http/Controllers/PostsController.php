@@ -69,7 +69,12 @@ class PostsController extends Controller
     }
 
     public function contact(){
-        return view('contact');
+
+        // $people = ['Pingkon', 'Augustine', 'Rozario', 'Bangladesh'];
+
+        $people = [];
+
+        return view('contact', compact('people'));
     }
 
     public function showPost($id, $name, $password){
