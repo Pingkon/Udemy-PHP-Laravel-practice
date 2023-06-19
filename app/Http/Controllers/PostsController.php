@@ -22,6 +22,8 @@ class PostsController extends Controller
     public function create()
     {
         //
+
+        return "I am the method that create stuff";
     }
 
     /**
@@ -35,9 +37,11 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
         //
+
+        return "This is the show method".$id;
     }
 
     /**
