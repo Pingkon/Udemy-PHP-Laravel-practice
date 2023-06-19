@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('posts', '\App\Http\Controllers\PostsController');
 
+Route::get('/contact', '\App\Http\Controllers\PostsController@contact');
+
 
 Route::get('/', function () {
     return view('welcome');
