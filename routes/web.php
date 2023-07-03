@@ -60,10 +60,19 @@ DATABASE Raw SQL Queries
 //     DB::insert('insert into posts (title, content) value(?, ?)',['PHP with Laravel','Laravel is the best thing that has happened to PHP']);
 // });
 
-Route::get('/read',function(){
+// Route::get('/read',function(){
 
-    $resulsts=DB::select('select * from posts where id=?',[1]);
+//     $resulsts=DB::select('select * from posts where id=?',[1]);
 
-    return var_dump ($resulsts);
+//     return var_dump ($resulsts);
 
-});
+// });
+
+
+// Route::get('/update', function(){
+
+//     $updated= DB::update('update posts set title = "Another Updated Title" where id=?',[2]);
+
+//     return $updated;
+
+// });
