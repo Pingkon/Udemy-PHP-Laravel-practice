@@ -51,11 +51,19 @@ use Illuminate\Support\Facades\DB;
 
 /*
 --------------------------------------------------------------------
-Application Routes
+DATABASE Raw SQL Queries
 --------------------------------------------------------------------
 */
 
-Route::get('/insert', function(){
+// Route::get('/insert', function(){
 
-    DB::insert('insert into posts (title, content) value(?, ?)',['PHP with Laravel','Laravel is the best thing that has happened to PHP']);
+//     DB::insert('insert into posts (title, content) value(?, ?)',['PHP with Laravel','Laravel is the best thing that has happened to PHP']);
+// });
+
+Route::get('/read',function(){
+
+    $resulsts=DB::select('select * from posts where id=?',[1]);
+
+    return var_dump ($resulsts);
+
 });
