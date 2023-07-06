@@ -59,7 +59,9 @@ DATABASE Raw SQL Queries
 
 // Route::get('/insert', function(){
 
-//     DB::insert('insert into posts (title, content) value(?, ?)',['PHP with Laravel','Laravel is the best thing that has happened to PHP']);
+//     $posts=DB::insert('insert into posts (title, content) value(?, ?)',['Laravel is awesome with Pingkon','Laravel is the best thing that has happened to PHP, PERIOD AGAIN']);
+
+//     return $posts;
 // });
 
 // Route::get('/read',function(){
@@ -105,14 +107,32 @@ ELOQUENT ORM
 // });
 
 
-Route::get('/find', function(){
+// Route::get('/find', function(){
 
-    $posts = Post::find(2);
+//     $posts = Post::find(2);
 
-    return $posts->title;
+//     return $posts->title;
 
-    // foreach($posts as $post){
-    //     return $post->title;
-    // }
+//     // foreach($posts as $post){
+//     //     return $post->title;
+//     // }
 
-});
+// });
+
+// Route::get('/findwhere', function(){
+
+//     $posts=Post::where('id', 3)->orderBy('id', 'desc')->take(1)->get();
+
+//     return $posts;
+// });
+
+// Route::get('/findmore', function(){
+
+//     // $posts=Post::findOrFail(1);
+
+//     // return $posts;
+
+//     $posts=Post::where('users_count', '<',50)->firstOrFail();
+
+// });
+
